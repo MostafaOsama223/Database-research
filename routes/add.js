@@ -19,15 +19,15 @@ router.post('/customer', function(req, res){
     });   
 });
 
-router.post('/addEmployee', function(req, res){
+router.post('/employee', function(req, res){
 var body = req.body;
 var query = ' INSERT INTO `employee` (`employee name`, `employee id`, `employee salery`,\
                                           `email`, `branch id`) VALUES ("'
-                                    +body.Name+'","'
-                                    +body.ID+'","'
+                                    +body.name+'","'
+                                    +body.id+'","'
                                     +body.salary+'","'
                                     +body.email+'","'
-                                    +body.branchID
+                                    +body.branchId
                                     +'")' ;
 
       console.log(query);
