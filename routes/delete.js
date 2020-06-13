@@ -28,4 +28,14 @@ router.post('/loan', function(req ,res){
   });
 });
 
+router.delete('/employee', function(req, res){
+  var body = req.body;
+  var query = "DELETE FROM `employee` WHERE `employee`.`employee id` = " + body.employeeId + ';';
+
+  conn.query(query, function(err, result, fields){
+    if(err) res.send(err);
+    else res.send(result);
+  });
+});
+
 module.exports =router;
