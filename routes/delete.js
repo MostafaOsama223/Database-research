@@ -17,4 +17,15 @@ router.delete('/customer',function(req,res){
   }
 });
 
+router.post('/loan', function(req ,res){
+  var body = req.body;
+  var pay_query = ' UPDATE `loan` SET `Paid`=1 WHERE `Loan_number`=' + body.Loan_number +";" ;
+
+  conn.query(pay_query,function(err , result,fields){
+    if (err) res.send(err);
+    else res.send(body);
+
+  });
+});
+
 module.exports =router;

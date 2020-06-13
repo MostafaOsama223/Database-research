@@ -60,4 +60,14 @@ router.post('/loan',function(req,res){
 
 });
 
+router.post('/cust_Acc', function (req, res) {
+    var body = req.body;
+    var query = "SELECT * FROM `account`ORDER BY `Balance` ASC";
+    
+    conn.query(query, function (err, result, fields) {
+        if (err) res.send("Error");
+        else res.send(result);
+    });
+});
+
 module.exports = router;

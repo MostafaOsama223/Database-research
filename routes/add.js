@@ -37,4 +37,21 @@ var query = ' INSERT INTO `employee` (`employee name`, `employee id`, `employee 
     });
 });
 
+router.post('/loan', function (req, res) {
+    var body = req.body;
+    var take_query = ' INSERT INTO `loan` (`Loan_number`, `Amount`, `Paid`,\
+                                              `customer_id`) VALUES ("' +
+                                                body.Loan_number + '","' +
+                                                body.Amount + '","' +
+                                                body.Paid + '","' +
+                                                body.customer_id +
+                                                '")';
+
+    conn.query(take_query, function (err, result, fields) {
+        if (err) res.send(err);
+        else res.send(body);
+
+    });
+});
+
 module.exports = router;

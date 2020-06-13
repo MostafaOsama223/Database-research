@@ -6,10 +6,6 @@ var list = require('./routes/list'); //this is used later
 var add = require('./routes/add');
 var transaction = require('./routes/transaction');
 var showById = require('./routes/showById');
-var del_customer = require('./routes/delete_customer');
-var loan = require('./routes/list_loan');
-var add_emp = require('./routes/add_emp');
-
 
 app.use(bodyParser.json()); //this is used as a middleware (middleman) to convert/validate(that) the request body is json
 
