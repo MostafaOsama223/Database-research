@@ -18,7 +18,7 @@ app.use('/', transaction);
 app.use('/showById', showById);
 app.use('/transaction', transaction);
 app.use('/delete', del);
-app.use('/modify', modify);
+//app.use('/modify', modify);
 
 app.get('/', function(req, res){ //if someone sent a GET req to this server
     res.end('hey');             // <=== this happens
