@@ -18,5 +18,5 @@ _delete_/employee       |   DELETE  |   {"employeeId":int}
 _list_/customer         |   POST    |   {"page":int, "limit":int}
 _list_/employee         |   POST    |   {"page":int, "limit":int}
 _list_/account          |   POST    |   {...}
---------------------------------------------
+------------------------|-----------|-------
 _modify_/customer       |   POST    |  {"firstName":str, "lastName":str, "address":str, "customer_id":int}
