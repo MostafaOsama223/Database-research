@@ -48,17 +48,11 @@ body{
     background: #e5d980;
   }
   .one{
-    grid-area:r;
-    text-align: center;
-  }
-  .two{
     grid-area:t;
     text-align: center;
+    font-size: 35px;
   }
-  .three{
-    grid-area:y;
-    text-align: center;
-  }
+
   #myList{
     margin: 10px 10px 10px 10px;
   }
