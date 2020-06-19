@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Database</title>
+    <link rel="stylesheet" href="public/access.css">
+  </head>
+  <body>
+    <div class="container">
+<!--  ********************************************************************************** -->
+      <div class="query_kind">
+        <h1>first box</h1>
+        <form>
+       <fieldset id="myList2">
+          <h3>Selecting Query</h3>
+          <p>
+             <label>Select</label>
+             <select id = "functions" onchange="change(0)" class="dropbtn">
+               <option value = "add">add</option>
+               <option value = "list">list</option>
+               <option value = "modify">modify</option>
+               <option value = "delete">delete</option>
+             </select>
+          </p>
+       </fieldset>
+       <fieldset id="myList2">
+          <h3>Selecting table</h3>
+          <p>
+             <label>Select</label>
+             <select id = "tables" onchange="change(0)" class="dropbtn">
+               <option value = "employee">employee</option>
+               <option value = "customer">customer</option>
+               <option value = "branch">branch</option>
+               <option value = "loan">loan</option>
+             </select>
+          </p>
+       </fieldset>
+    </form>
+      </div>
+<!--  ********************************************************************************** -->
+<!--  ********************************************************************************** -->
+
+      <div class="query_data">
+        <h1>second box</h1>
+
+        <div id="list" class="ay7aga" style="display: none;"> <!-- LIST -->
+          <label for="from">From:</label>
+          <input placeholder="from" id="from" />
+          </br>
+          <label for="to">To:</label>
+          <input placeholder="to" id="to" />
+        </div>
+
+        <div id="add_employee" class="ay7aga" style="display: none;"> <!-- ADD EMPLOYEE -->
+          <label for="name">Name:</label>
+          <input placeholder="name" id="name" />
+          </br>
+          <label for="id">Id:</label>
+          <input placeholder="id" id="id" />
+          </br>
+          <label for="salary">Salary:</label>
+          <input placeholder="salary" id="salary" />
+          </br>
+          <label for="email">Email:</label>
+          <input placeholder="email" id="email" />
+          </br>
+          <label for="branchId">Branch Id:</label>
+          <input placeholder="Branch id" id="branchId" />
+        </div>
+
+        <div id="modify_employee" class="ay7aga" style="display: none;"> <!-- MODIFY EMPLOYEE -->
+          <label for="id">Id:</label>
+          <input placeholder="Id" id="id" />
+          </br>
+          <label for="name">NewName:</label>
+          <input placeholder="New name" id="name" />
+          </br>
+          <label for="id">NewId:</label>
+          <input placeholder="New id" id="id" />
+          </br>
+          <label for="salary">NewSalary:</label>
+          <input placeholder="New salary" id="salary" />
+          </br>
+          <label for="email">NewEmail:</label>
+          <input placeholder="New email" id="email" />
+          </br>
+          <label for="branchId">NewBranch Id:</label>
+          <input placeholder="New branch id" id="branchId" />
+        </div>
+
+        <div id="delete_employee" class="ay7aga" style="display: none;"> <!-- DELETE EMPLOYEE -->
+          <label for="empId">Id:</label>
+          <input placeholder="Id" id="empId" />
+        </div>
+
+        <div id="add_customer" class="ay7aga" style="display: none;"> <!-- ADD CUSTOMER -->
+          <label for="fname">First name:</label>
+          <input placeholder="First name" id="fname" />
+          </br>
+          <label for="lname">Last name:</label>
+          <input placeholder="Last name" id="lname" />
+          </br>
+          <label for="add">Address:</label>
+          <input placeholder="Address" id="add" />
+          </br>
+          <label for="city">City:</label>
+          <input placeholder="City" id="city" />
+          </br>
+          <label for="custId">Id:</label>
+          <input placeholder="Customer id" id="custId" />
+          </br>
+          <label for="empId">Employee id:</label>
+          <input placeholder="Employee id" id="empId" />
+        </div>
+
+        <div id="modify_customer" class="ay7aga" style="display: none;"> <!-- MODIFY CUSTOMER -->
+          <label for="id">Id:</label>
+          <input placeholder="Id" id="id" />
+          </br>
+          <label for="fname">New first name:</label>
+          <input placeholder="New first name" id="fname" />
+          </br>
+          <label for="lname">New last name:</label>
+          <input placeholder="New last name" id="lname" />
+          </br>
+          <label for="add">New address:</label>
+          <input placeholder="New address" id="add" />
+          </br>
+          <label for="city">New city:</label>
+          <input placeholder="New city" id="city" />
+          </br>
+          <label for="id">New id:</label>
+          <input placeholder="New id" id="id" />
+          </br>
+          <label for="empId">New employee id:</label>
+          <input placeholder="New employee id" id="empId" />
+        </div>
+
+        <div id="add_branch" class="ay7aga" style="display: none;"> <!-- ADD BRANCH -->
+          <label for="id">branch id:</label>
+          <input placeholder="branch id" id="id" />
+          </br>
+          <label for="add">address:</label>
+          <input placeholder="address" id="add" />
+          </br>
+          <label for="lname">city:</label>
+          <input placeholder="City" id="city" />
+          </br>
+        </div>
+
+        <div id="add_loan" class="ay7aga" style="display: none;"> <!-- ADD LOAN -->
+          <label for="loanNum">Loan number:</label>
+          <input placeholder="Loan number" id="loanNum" />
+          </br>
+          <label for="amount">amount:</label>
+          <input placeholder="loan amount" id="amount" />
+          </br>
+          <label for="paid">paid:</label>
+          <input placeholder="paid" id="paid" />
+          </br>
+          <label for="custId">customer id:</label>
+          <input placeholder="customer ID" id="custId" />
+        </div>
+
+        <div id="modify_loan" class="ay7aga" style="display: none;"> <!-- MODIFY LOAN -->
+          <label for="Loan number">Loan number:</label>
+          <input placeholder="Loan number" id="Loan number" />
+          </br>
+          <label for="customer id">customer id:</label>
+          <input placeholder="customer ID" id="customer id" />
+          </br>
+          <label for="paid">New paid status:</label>
+          <input placeholder="paid status" id="paid" />
+          <p> select using customer ID <strong>OR</strong> Loan number </p>
+        </div>
+
+        <div id="delete_customer" class="ay7aga" style="display: none;"> <!-- DELETE CUSTOMER -->
+          <label for="custId">customer id:</label>
+          <input placeholder="customer id" id="custId" />
+          </br>
+        </div>
+
+        <div id="delete_branch" class="ay7aga" style="display: none;"> <!-- DELETE BRANCH -->
+          <label for="branchId">branch id:</label>
+          <input placeholder="branch id" id="branchId" />
+          </br>
+        </div>
+
+        <div id="delete_loan" class="ay7aga" style="display: none;"> <!-- DELETE LOAN -->
+          <label for="loanNum">loan number:</label>
+          <input placeholder="loan number" id="loanNum" />
+          </br>
+          <label for="custId">customerid:</label>
+          <input placeholder="customer id" id="custId" />
+          <p> select loan number <strong>OR</strong> customerid</p>
+        </div>
+        <button id='submit' type="submit" onclick="change(1)">Send</button>
+
+      </div>
+<!--  ********************************************************************************** -->
+<!--  ********************************************************************************** -->
+
+      <div class="query_result">
+        <h1>third box</h1>
+        <h3 id='results'></h3>
+        
+      </div>
+<!--  ********************************************************************************** -->
+<!--  ********************************************************************************** -->
+
+      <div class="one">
+        <h1>Choose query</h1>
+      </div>
+      <div class="two">
+        <h1>Enter Data</h1>
+      </div>
+      <div class="three">
+        <h1>Output</h1>
+      </div>
+
+    </div>
+
+    <script src="public/script.js"></script>
+  </body>
+</html>
