@@ -7,8 +7,14 @@ function change(x){
     let func = document.getElementById('functions').value;
     let divId = '';
     let divs = document.getElementsByClassName('ay7aga');
+    document.getElementById('tables').disabled = false;
 
-    if(func != 'list')  divId = func + '_' + table;
+    if(func === 'draw' || func === 'deposit'){
+        document.getElementById('tables').disabled = true;
+        divId = func;
+        table = '';
+    }   
+    else if(func != 'list')  divId = func + '_' + table;
     else  divId = 'list';
 
     for (let i = 0; i < divs.length; i++) {

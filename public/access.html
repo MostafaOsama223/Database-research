@@ -21,6 +21,8 @@
                <option value = "list">list</option>
                <option value = "modify">modify</option>
                <option value = "delete">delete</option>
+               <option value = "draw">draw</option>
+               <option value = "deposit">deposit</option>
              </select>
           </p>
        </fieldset>
@@ -33,6 +35,7 @@
                <option value = "customer">customer</option>
                <option value = "branch">branch</option>
                <option value = "loan">loan</option>
+               <option value = "account">account</option>
              </select>
           </p>
        </fieldset>
@@ -43,6 +46,22 @@
 
       <div class="query_data">
         <h1>second box</h1>
+
+        <div id="draw" class="ay7aga" style="display: none;"> <!-- DRAW -->
+          <label for="accNo">Account number:</label>
+          <input placeholder="Account number" id="accNo" />
+          </br>
+          <label for="balance">Balance:</label>
+          <input placeholder="Balance" id="balance" />
+        </div>
+
+        <div id="deposit" class="ay7aga" style="display: none;"> <!-- DEPOSIT -->
+          <label for="accNo">Account number:</label>
+          <input placeholder="Account number" id="accNo" />
+          </br>
+          <label for="balance">Balance:</label>
+          <input placeholder="Balance" id="balance" />
+        </div>
 
         <div id="list" class="ay7aga" style="display: none;"> <!-- LIST -->
           <label for="from">From:</label>
